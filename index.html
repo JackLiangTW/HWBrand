@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+@font-face {
+  font-family: 'NotoSansCJKtc';
+  src:url('./fonts/NotoSansCJKtc-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: 'NotoSansCJKtc', 微軟正黑體;
+}
+.f_nowrap{white-space:nowrap;}
+.fbold{font-weight: bold;}
+.fnorm{font-weight: normal;}
+.fs32{font-size: 32px;}
+.fs24{font-size: 24px;}
+.fs18{font-size: 18px;}
+.fs16{font-size: 16px;}
+.ab{position: absolute;}
+.re{position:relative;}
+.m_auto{margin: 0 auto;}
+.ver_b{vertical-align: bottom;}
+.ver_t{vertical-align: top;}
+.ver_m{vertical-align: middle;}
+.inbk{display: inline-block;vertical-align: middle;}
+.bk{display: block;}
+.txtcen{text-align: center;}
+.txtl{text-align: left;}
+.txtr{text-align: right;}
+.w9{width: 9%;}
+.w10{width: 10%;}
+.w19{width: 19%;}
+.w20{width: 20%;}
+.w29{width: 29%;}
+.w30{width: 30%;}
+.w31{width: 31%;}
+.w33{width: 33%;}
+.w40{width: 39%;}
+.w48{width: 48%;}
+.w49{width: 49%;}
+.w50{width: 50%;}
+.w59{width: 59%;}
+.w60{width: 59%;}
+.w69{width: 69%;}
+.w70{width: 70%;}
+.w75{width: 75%;}
+.w79{width: 79%;}
+.w80{width: 80%;}
+.w90{width: 90%;}
+.w100{width: 100%;}
+.ftl{float: left;}
+.ftr{float:right;}
+.round{border-radius: 100%;}
+.borl{border-top-left-radius: 100%;border-bottom-left-radius: 100%;}
+.borr{border-top-right-radius: 100%;border-bottom-right-radius: 100%;}
+.nimg{width: 100%;height: auto;}
+.flex_balance{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    box-sizing: border-box;    
+    padding: 5px 8px;    
+    width: 100px;
+    flex: 0;
+}
+#big_out{
+    width: 900px;
+    margin: 0 auto;   
+    position: relative; 
+}
+#big_out .in_section{
+    width: 100%;
+    display: block;
+    height: auto;
+    position: relative;
+}
+.mo_back{display: none;}
+.mo_block{display: none;}
+/*sec1*/
+.sec1{
+    width: 100%;
+    height: 661px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s1_kv_pc.jpg");
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ani_3{
+    top: 167px;
+    right:50px;
+    width: 374px;
+    height: 436px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/bottle.png");
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ani_3 div{
+    height: 100%;
+}
+.ani_3 div>span{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.ani_3 div>span.ab>img{width: 85px;height: auto;}
+.ani_3 div>span.it01{
+    -webkit-animation: do01 1.5s forwards;
+    animation: do01 1.5s forwards;    
+}
+.ani_3 div>span.it02{
+    -webkit-animation: do02 1s forwards;
+    animation: do02 1.5s forwards;    
+}
+.ani_3 div>span.it03{
+    -webkit-animation: do03 1.5s forwards;
+    animation: do03 1.5s forwards;    
+}
+.line_01{top: 375px;right:80px;opacity: 0;-webkit-animation: opa 2.5s forwards;animation: opa 2.5s forwards; }
+.line_02{top: 220px;left: 40px;opacity: 0;-webkit-animation: opa 2.5s forwards;animation: opa 2.5s forwards; }
+.sec1 .bottoms{
+    top: 100%;
+    height: 255px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s2_des_pc.jpg");
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+.sec1 .bottoms>span.bk:nth-child(1){
+    font-size: 35px;
+    font-weight: bold;    
+    letter-spacing: 3.5px;
+    text-align: center;
+    color: #fae81c;
+    margin-top: 45px;
+}
+.sec1 .bottoms>span.bk:nth-child(2){
+    font-size: 19.5px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: 2.93px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 14px;
+}
+.sec1 .bottoms>span.bk:nth-child(3){margin-top: 23px;}
+.sec1 .bottoms>span.bk:nth-child(3),.sec1 .bottoms>span.bk:nth-child(4){
+    font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: 1.6px;
+  text-align: center;
+  color: #fcd8cf;
+}
+@keyframes do01{
+    0%{top: 60%;left: 50%;transform: translate(-50%,0%);opacity: 0;}
+    100%{top: 50%;left:100%;transform: translate(-75%,-50%);opacity: 1;}
+}
+@keyframes do02{
+    0%{top: 60%;left: 50%;transform: translate(-50%,0%);opacity: 0;}
+    100%{top: 100%;left: 100%;transform: translate(-200%,-100%);opacity: 1;}
+}
+@keyframes do03{
+    0%{top: 60%;left: 50%;transform: translate(-50%,0%);opacity: 0;}
+    100%{top: 50%;left:0;transform: translate(-35%,0%);opacity: 1;}
+}
+@keyframes opa{
+    0%{opacity: 0;}
+    70%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*sec2*/
+#big_out .in_section:nth-child(2){
+    margin-top: 255px;
+    height: 1065px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s3_item_pc.jpg");
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+/*sec3*/
+#big_out .in_section:nth-child(3){
+    height: 975px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_bg_pc.jpg");
+    background-position: center;    
+    background-repeat: repeat;
+    padding-top: 69px;
+}
+#big_out .in_section:nth-child(3)>h1{margin-bottom: 0;}
+#big_out .in_section:nth-child(3)>h1>span:nth-child(1){
+  font-size: 53px;
+  font-weight: bold;  
+  letter-spacing: 5.3px;
+  line-height: .8;
+  text-align: center;
+  color: #d83800;  
+}
+#big_out .in_section:nth-child(3)>h1>span:nth-child(2){
+    font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;  
+  line-height: 0.75;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #d83800;
+  margin-top: 18px;
+}
+.sec3{width: 670px;margin-top: 50px;}
+.sec3>.half{width: 330px;box-sizing: border-box;}
+.sec3>.half:nth-child(2){margin-left: -5px;}
+.sec3>.half>.color_out{border-bottom-left-radius:10px;border-bottom-right-radius: 10px;padding-top: 10px;padding-left: 45px;padding-bottom: 50px;}
+.sec3>.half>.color_out>div{margin-top: 53px;}
+.sec3>.half>.color_out>div:nth-child(1){margin-top:0px;}
+.sec3>.half>.color_out>div>span.words{
+    margin-left: 23px;
+    font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 1.4px;
+  color: #ccc;
+}
+.sec3>.half>.color_out>div>span.words>span.titles{
+    font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+.sec3>.half>.color_out img{width: 118px;height: auto;}
+.sec3>.half:nth-child(1)>.color_out{background-color: #666666;}
+.sec3>.half:nth-child(2)>.color_out{background-color: #d83800;}
+/*sec4*/
+#big_out .in_section:nth-child(4){
+    height: 743px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_bg_pc.png");
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-size: contain;    
+}
+#big_out .in_section:nth-child(4)>h1{margin: 0;padding-top: 50px;}
+#big_out .in_section:nth-child(4)>h1>span:nth-child(1){
+    font-size: 30.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: 3.05px;
+  text-align: center;
+  color: #dc3d12;
+}
+#big_out .in_section:nth-child(4)>h1>span:nth-child(2){
+    font-size: 49.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 4.95px;
+  text-align: center;
+  color: #dc3d12;
+}
+.se4{width:100%;}
+.se4>div:nth-child(1){margin-left: 94px;margin-top:10px;}
+.se4>div:nth-child(2){margin-left: 277px;margin-top: 50px;padding-top: 20px;}
+.se4>div:nth-child(1)>img:nth-child(1){width: 233px;height: auto;}
+.se4>div:nth-child(1)>img:nth-child(2){width: 192px;height: auto;margin-top: 49px;}
+.se4>div:nth-child(2)>img:nth-child(1){width: 221px;height: auto;}
+.se4>div:nth-child(2)>img:nth-child(2){width: 162px;height: auto;margin-top: 54px;margin-right: 15px;}
+/*sec5*/
+#big_out .in_section:nth-child(5){
+    height: 995px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s6_time_bg_pc.png");
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-size: contain;    
+}
+#big_out .in_section:nth-child(5)>.sec5>h1{margin: 0 0 0 60px;}
+#big_out .in_section:nth-child(5)>.sec5>h1>span:nth-child(1){
+    font-size: 30.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.77;
+  letter-spacing: 3.05px;  
+  color: #ffffff;
+}
+#big_out .in_section:nth-child(5)>.sec5>h1>span:nth-child(2){
+    font-size: 50.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: 5.05px;  
+  color: #ffffff;
+}
+#big_out .in_section:nth-child(5)>.sec5>h1>span:nth-child(3){
+    font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3;
+  letter-spacing: 1.8px;  
+  color: #ffdec7;
+}
+#big_out .in_section:nth-child(5)>.sec5{width: 100%;}
+#big_out .in_section:nth-child(5)>.sec5>span{
+    font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 1.8px;
+  text-align: center;
+  color: #ffffff;
+}
+#big_out .in_section:nth-child(5)>.sec5>span.wdl{left: 60px;top: 400px;}
+#big_out .in_section:nth-child(5)>.sec5>span.wdr{right:40px;bottom: 150px;}
+/*sec6*/
+#big_out .in_section:nth-child(6){
+    height: 709px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s7_pear_bg_pc.jpg");
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-size: contain;
+}
+#big_out .in_section:nth-child(6)>h1{margin: 0 0 0 95px;padding-top: 130px;text-align: left;line-height:50px;}
+#big_out .in_section:nth-child(6)>h1>span:nth-child(1){
+    font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 2.5px;
+  color: #458118;
+}
+#big_out .in_section:nth-child(6)>h1>span:nth-child(2){
+    font-size: 59.5px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 5.95px;
+  color: #458118;
+  margin-top: 5px;
+}
+#big_out .in_section:nth-child(6)>h1>span:nth-child(3){
+    font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: #336c08;
+  margin-top: 5px;
+}
+/*sec7*/
+.in_section:nth-child(7){
+    width: 100%;
+    height: auto;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_bg_pc.jpg");
+    background-position: center;    
+    background-repeat: repeat;
+    padding-top: 240px;
+    padding-bottom: 90px;
+}
+.in_section:nth-child(7)>.titles{
+    width: 100%;
+    top: -3px;
+    height: 225px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_title_pc.jpg");
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-size: contain;
+    text-align: center;
+    z-index: 99;
+}
+.sec7{width: 80.5%;margin: 0 auto;}
+.sec7 .dress_back{
+    top: 16px;
+    left: -33px;
+    width: 84px;
+    height: 101px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_name.png");
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-size: contain;
+    text-align: center;
+}
+.sec7 .dress_back span{
+    font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #ffffff;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.sec7>div{margin-top: 43px;}
+.sec7>div:nth-child(1){margin-top: 10px;}
+.sec7>div .words>div{padding-left: 33px;}
+.sec7>div:nth-child(2) .words>div{padding-left:0px;padding-right: 62px;}
+.sec7>div .words>div:nth-child(1)>span:nth-child(1){
+    font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.75;
+  letter-spacing: 3px;
+  color: #c23426;
+}
+.in_section:nth-child(7) .words>div:nth-child(1)>span:nth-child(2){
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  color: #c23426;
+  padding:4px 12px;
+  border-top: 2px #c23426 solid;
+  border-bottom: 2px #c23426 solid;
+}
+.in_section:nth-child(7) .words>div:nth-child(2){
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 1.6px;
+  text-align: justify;
+  color: #666666;
+  margin-top: 28px;
+}
+.sec7 .w40 img{width:286px;height: auto;}
+.sec7>div.bottoms{margin-top: 95px;}
+.sec7>div.bottoms>div{width:45%;}
+.sec7>div.bottoms>div:nth-child(2){margin-left: 9%;}
+.sec7>div.bottoms>div>div:nth-child(1){
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: #333333;
+  z-index: 10;
+}
+.sec7>div.bottoms>div>div:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 40px);
+    top: -20px;
+    left: -15px;
+    border-radius: 40px;
+    background-color: #fff;
+    z-index: -1;
+}
+.sec7>div.bottoms>div>div:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    width: 98px;
+    height: 23px;
+    left: 50%;
+    top:calc(100% + 20px);
+    transform: translate(-50%,0);
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_dia.png");
+    background-position: center;    
+    background-repeat: no-repeat;    
+    background-size: contain;
+    text-align: center;
+}
+.sec7>div.bottoms>div>div:nth-child(2){margin-top:65px; }
+.sec7>div.bottoms>div>div:nth-child(2)>div>span{
+    margin-top: 10px;
+    font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 1.6px;
+  color: #333333;
+}
+@media only screen and (min-width: 768px) {
+    .btns{cursor: pointer;transition: all .5s;}
+    .btns:hover{
+        transform: translate(0%,-10%) scale(1.02,1.02);
+    }
+}
+/*sec8*/
+#big_out .in_section:nth-child(8){
+    height: 1950px;
+    background-image: url("https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_bg_pc.png");
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: 100% 1950px;
+}
+#big_out .in_section:nth-child(8)>h1{margin: 0;padding-top:400px; margin-bottom: 58px;}
+#big_out .in_section:nth-child(8)>h1>span:nth-child(1){
+  font-size: 63px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 6.3px;
+  text-align: center;
+  color: #fae81c;
+}
+#big_out .in_section:nth-child(8)>h1>span:nth-child(2){
+  font-size: 22.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;  
+  letter-spacing: 3.2px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
+}
+#big_out .in_section:nth-child(8)>div:nth-child(2){width: 705px;}
+#big_out .in_section:nth-child(8)>div:nth-child(2)>div:nth-child(2){margin-top: 18px;}
+#big_out .in_section:nth-child(8)>div .img_bar{ 
+    width: 340px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+#big_out .in_section:nth-child(8)>div .img_bar:nth-child(2){margin-left:20px;}
+#big_out .in_section:nth-child(8)>div .img_bar img{width: 205px;height: auto;position: relative;display: inline-block;top: 50%;transform: translate(0,-50%);}
+.sec8 .wbtn{border-radius:75px;border: 1px solid #fff;margin-top: 20px;background-color: #fff;}
+#big_out .in_section:nth-child(8) .ques{margin-top: 110px;}
+#big_out .in_section:nth-child(8) .ques>h1{
+  font-size: 60px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 6px;  
+  color: #ffffff;
+  margin-bottom: 70px;
+}
+#big_out .in_section:nth-child(8) .ques>div>div{margin-left: 20%;}
+#big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(1){
+    font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: 2.2px;
+  color: #fae81c;
+}
+#big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(2){
+    margin-top: 24px;
+    margin-bottom: 91px;
+    font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  text-align: justify;
+}
+#big_out .in_section:nth-child(8) .ques>div:last-child>div>span:nth-child(2){
+    margin-bottom: 0;
+}
+#big_out .in_section:nth-child(8) .ques>div>img{
+    top: 0;
+    left: 20%;
+    transform: translate(-130%,-20%);
+    width: 73px;
+    height: 73px;
+}
+
+@media only screen and (max-width: 900px) {
+    .mo_none{display: none;}
+    .mo_bk{display: block;}
+    .mo_txtcen{text-align: center;}
+    #big_out{width: 100%;}
+    .sec1,#big_out .in_section:nth-child(2),#big_out .in_section:nth-child(4)
+    {background-image: none;height: auto;}
+    /*sec1*/    
+    .sec1 .bottoms{background-size: cover;height: 433px;background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s2_des_m.jpg');}
+    .line_01,.ani_3{display: none;}
+    .mo_back{display: block;width: 100%;height: auto;}
+    .mo_block{display:block;}
+    .sec1 .bottoms>span.bk:nth-child(1){font-size: 6.6vw;}
+    .sec1 .bottoms>span.bk:nth-child(2){font-size: 4.2vw;margin-bottom:15px; }
+    .sec1 .bottoms>span.s1_mowd{
+        font-size: 3.2vw;
+        font-weight: normal;                
+        line-height: normal;
+        letter-spacing: 1px;        
+        color: #fcd8cf;
+        margin-top: 5px;
+    }
+    /*sec2*/
+    #big_out .in_section:nth-child(2){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s3_item_m.jpg');background-size: cover;height:calc(100vw * 1.78);}
+    #big_out .in_section:nth-child(2){margin-top: 432px;}    
+    /*sec3*/
+    #big_out .in_section:nth-child(3){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_bg_m.jpg');height: auto;padding-bottom: 168px;}
+    .sec3>.half>.color_out{padding-left: 0;}
+    .sec3{width: 90%;}
+    .sec3>.half{width: 49%;}
+    .sec3>.half>.color_out>div>span.words{margin-left: 0;}
+    .sec3>.half>.color_out>div{min-height: 330px;box-sizing: border-box;}
+    .sec3>.half>.color_out>div>span.words>span.titles{margin-top: 10px;}
+    .sec3>.half>.color_out>div>span.words>span:nth-child(2){margin-top: 5px;}
+    .sec3>.half>.color_out{margin-top: -1px;}
+    .sec3>.half>.color_out img{width: 18.6vw;height: auto;}
+    .sec3>.half>.color_out>div>span.words{font-size:3.3vw; }
+    .sec3>.half>.color_out>div>span.words>span.titles{font-size:4.3vw; }
+    #big_out .in_section:nth-child(3)>h1>span:nth-child(1){font-size: 9.6vw;}
+    #big_out .in_section:nth-child(3)>h1>span:nth-child(2){font-size: 5vw;}
+    /*sec4*/
+    #big_out .in_section:nth-child(4)>h1>span:nth-child(1){font-size:5.3vw; }
+    #big_out .in_section:nth-child(4)>h1>span:nth-child(2){font-size:9vw; }
+    #big_out .in_section:nth-child(4){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_bg_m.png');background-size: cover;height:860px;}
+    .se4{margin-top: 20px;}
+    .se4>div:nth-child(1){margin-left:2.5vw;}
+    .se4>div:nth-child(1)>img:nth-child(1){width:33.3vw;min-width: 150px;}
+    .se4>div:nth-child(1)>img:nth-child(2){width: 26vw;margin-left: 5vw;min-width: 115px;}
+    .se4>div:nth-child(2){margin-left:27vw;}
+    .se4>div:nth-child(2)>img:nth-child(1){width: 30.4vw;min-width: 135px;}
+    .se4>div:nth-child(2)>img:nth-child(2){width: 24.4vw;margin-right: 3vw;min-width: 110px;margin-top: 38px;}
+    /*sec5*/
+    #big_out .in_section:nth-child(5){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s6_time_bg_m.png');background-size: cover;height: calc(100vw * 1.4);margin-top: -3px;}
+    #big_out .in_section:nth-child(5)>.sec5{padding-top: 30px;}
+    #big_out .in_section:nth-child(5)>.sec5>h1{margin:15px 0 0 42px;}
+    #big_out .in_section:nth-child(5)>.sec5>h1>span:nth-child(1){font-size: 5.3vw;line-height:1.1;}
+    #big_out .in_section:nth-child(5)>.sec5>h1>span:nth-child(2){font-size: 9.3vw;}
+    #big_out .in_section:nth-child(5)>.sec5>h1>span:nth-child(3){font-size: 3.5vw;line-height:1.5;}
+    #big_out .in_section:nth-child(5)>.sec5>span{font-size: 3.8vw;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{text-align: left;left: 45px;top: 495px;line-height: 1.25;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{text-align: left;right: 35px;bottom: 160px;line-height: 1.25;}
+    /*sec6*/
+    #big_out .in_section:nth-child(6){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s7_pear_bg_m.jpg');background-size: cover;height:calc(100vw * 1.52);margin-top: -3px;}
+    #big_out .in_section:nth-child(6)>h1{margin: 0 0 0 65px;line-height: 1;}
+    #big_out .in_section:nth-child(6)>h1>span:nth-child(1){font-size: 5.3vw;}
+    #big_out .in_section:nth-child(6)>h1>span:nth-child(2){font-size: 9.3vw;letter-spacing: 3.5;}
+    #big_out .in_section:nth-child(6)>h1>span:nth-child(3){font-size: 4.1vw;letter-spacing: 1.5;}
+    /*sec7*/
+    .sec7{width:77.3%;}
+    .in_section:nth-child(7)>.titles{background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_title_m.jpg');background-size: cover;height:calc(100vw * 0.306);margin-top: -3px;}
+    .in_section:nth-child(7){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_bg_m.jpg');}
+    .sec7>div{margin-top: 78px;}
+    .sec7 .w40 img{width: 100%;}
+    .sec7>div>div.inbk{display: block;}
+    .sec7>div>div.inbk.mo_none{display: none;}
+    .sec7>div>div.inbk.w40{width: 43.7vw;margin: 0 auto;}
+    .sec7>div>div.inbk.w60{width: 83vw;text-align: center;margin-top: 38px;}
+    .sec7>div .words>div{padding-left: 0px;}
+    .in_section:nth-child(7) .words>div:nth-child(2){padding-right: 0px;}
+    .sec7>div .words>div:nth-child(1)>span:nth-child(1){font-size: 6.6vw;}    
+    .in_section:nth-child(7) .words>div:nth-child(1)>span:nth-child(2){font-size: 4.6vw;}
+    .in_section:nth-child(7) .words>div:nth-child(2){font-size: 3.8vw;}
+    .sec7>div.bottoms{margin-top: 115px;}
+    .sec7>div.bottoms>div{width:100%;margin: 0 auto;}
+    .sec7>div.bottoms>div:nth-child(2){margin-left: 0;margin-top: 87px;}
+    .sec7>div.bottoms>div>div:nth-child(1){font-size: 4.2vw;}
+    .sec7>div.bottoms>div>div:nth-child(2)>div>span{font-size: 3.2vw;}
+    /*sec8*/
+    #big_out .in_section:nth-child(8){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_bg_m.png');background-size: cover;height:calc(100vw * 4.4);}
+    #big_out .in_section:nth-child(8)>h1{padding-top: 430px;margin-bottom:67px;}
+    #big_out .in_section:nth-child(8)>h1>span:nth-child(1){font-size: 9.3vw;}
+    #big_out .in_section:nth-child(8)>h1>span:nth-child(2){font-size: 5.3vw;}
+    #big_out .in_section:nth-child(8)>div .img_bar{width: 78%;height: 140px;display: block;border-radius: 70px;margin: 0 auto;}
+    #big_out .in_section:nth-child(8)>div .img_bar:nth-child(2){margin:35px auto 0 auto;}
+    #big_out .in_section:nth-child(8)>div .img_bar img{width:41.3%; }
+    #big_out .in_section:nth-child(8)>div:nth-child(2)>div:nth-child(2){margin-top: 35px;}
+    #big_out .in_section:nth-child(8)>div:nth-child(2){width: 100%;}
+
+    #big_out .in_section:nth-child(8) .ques{width: 100%;}
+    #big_out .in_section:nth-child(8) .ques>div>div{width:69.3%;margin-left:20%; }
+    #big_out .in_section:nth-child(8) .ques>h1{font-size: 9.3vw;}
+    #big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(1){font-size: 4.2vw;}
+    #big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(2){font-size: 3.8vw;line-height: 1.7;letter-spacing: 2.85px;margin-bottom:123px;}
+    #big_out .in_section:nth-child(8) .ques>div>img{width: 12vw;height:12vw;}
+}
+@media only screen and (max-width: 768px) {    
+    .sec3>.half>.color_out>div{min-height: 285px;box-sizing: border-box;}
+    #big_out .in_section:nth-child(4){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_bg_m.png');background-size: cover;height:calc(100vw * 1.06);}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{left: 45px;top: 415px;}
+    #big_out .in_section:nth-child(8){background-image: url('https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_bg_m.png');background-size: cover;height:3300px;}
+    #big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(2){margin-bottom:110px;}
+}
+@media only screen and (max-width: 720px) {
+    .se4>div:nth-child(1){position: absolute;bottom:100px;left: 0.8%;margin: 0;}
+    .se4>div:nth-child(2){position: absolute;bottom:100px;right: 0.8%;margin: 0;}
+    .se4>div:nth-child(1)>img:nth-child(1){width: 30vw;}
+    .se4>div:nth-child(1)>img:nth-child(2){margin-left:1vw;}
+}
+@media only screen and (max-width: 700px) {
+    #big_out .in_section:nth-child(6)>h1{margin: 0 0 0 50px;}
+    #big_out .in_section:nth-child(6)>h1>span:nth-child(2){font-size:8.5vw; }
+}
+@media only screen and (max-width: 660px) {
+    .se4>div:nth-child(1){bottom:50px;left: 0.8%;}
+    .se4>div:nth-child(2){bottom:50px;right: 0.8%;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{top: 370px;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{bottom: 140px;}
+    #big_out .in_section:nth-child(8){height:calc(100vw * 4.7);}
+    #big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(2){margin-bottom:45px; }
+}
+@media only screen and (max-width: 600px) {
+    #big_out .in_section:nth-child(8)>div .img_bar{height: 100px;}
+    .sec7{width: 85%;}
+    .sec7>div:nth-child(2) .words>div{padding-right: 0;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{top: 340px;left: 30px;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{bottom: 110px;right: 28px;}
+    .sec3>.half>.color_out>div{min-height: 250px;}
+    #big_out .in_section:nth-child(8)>h1{padding-top:320px; }
+}
+@media only screen and (max-width: 520px) {
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{top: 280px;left: 30px;}
+    /* .se4>div:nth-child(1){margin-top: 110px;}
+    .se4>div:nth-child(2){margin-top: 110px;margin-left: 23vw;} */
+    #big_out .in_section:nth-child(6)>h1{margin: 0 0 0 35px;padding-top: 100px;}
+    #big_out .in_section:nth-child(6)>h1>span:nth-child(2){font-size:8.2vw; }
+}
+@media only screen and (max-width: 500px) {
+    .se4>div:nth-child(1){bottom:0px;left: 0.8%;}
+    .se4>div:nth-child(2){bottom:0px;right: 0.8%;}
+}
+@media only screen and (max-width: 420px) {
+    /*sec1*/
+    .sec1 .bottoms{height: 280px;}
+    /*sec2*/
+    #big_out .in_section:nth-child(2){height: calc(100vw * 1.788);}/*height:740px;*/
+    #big_out .in_section:nth-child(2){margin-top:278px;}
+    /*sec3*/ 
+    #big_out .in_section:nth-child(3){padding-bottom:100px; }
+    .sec3>.half>.color_out>div{margin-top: 15px;}
+    #big_out .in_section:nth-child(3){padding-top: 10px;}
+    .sec3>.half>.color_out>div{min-height:180px; }
+    /*sec4*/
+    #big_out .in_section:nth-child(4){height: 480px;}
+    #big_out .in_section:nth-child(4)>h1{padding-top: 20px;}
+    .se4{margin-top: 0;}
+    .se4>div:nth-child(1)>img:nth-child(1){min-width: 120px;}
+    .se4>div:nth-child(1){bottom:30px;left: 0.8%;}
+    .se4>div:nth-child(2){bottom:30px;right: 0.8%;}
+    /*sec5*/
+    #big_out .in_section:nth-child(5)>.sec5>h1{margin: 15px 0 0 25px;}
+    #big_out .in_section:nth-child(5){height: calc(100vw * 1.4);}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{left: 20px;top: 240px;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{right: 10px;bottom: 80px;}
+    #big_out .in_section:nth-child(5)>.sec5{padding-top: 5px;}
+    /*sec6*/
+    #big_out .in_section:nth-child(6){height: calc(100vw * 1.52);}
+    #big_out .in_section:nth-child(6)>h1{margin: 0 0 0 40px;padding-top: 75px;}
+    #big_out .in_section:nth-child(6)>h1>span:nth-child(2){font-size: 8vw;}
+    /*sec7*/
+    .in_section:nth-child(7){padding-bottom: 40px;}
+    .sec7{width: 100%;}
+    .sec7>div{margin-top: 50px;}
+    .in_section:nth-child(7){padding-top: 170px;}
+    .in_section:nth-child(7)>.titles{height: calc(100vw * 0.306);}
+    .sec7>div>div.inbk.w40{width: 43.7%;}
+    .sec7>div>div.inbk.w60{width:88%;margin:38px auto 0 auto;}
+    .sec7>div:nth-child(2) .words>div{padding-right: 0;}
+    .sec7>div.bottoms>div{width:88%;}
+    .sec7>div.bottoms>div:nth-child(2){margin: 70px auto 0 auto;}
+    .sec7>div.bottoms{margin-top: 80px;}
+    .sec7 .dress_back{width: 63px;height:77px;top: 0;}
+    .sec7 .dress_back span{font-size:16px;}
+    /*sec8*/
+    #big_out .in_section:nth-child(8){height: calc(100vw * 4.5);}
+    #big_out .in_section:nth-child(8)>h1{padding-top: 230px;margin-bottom: 30px;margin-top: -1px;}
+    #big_out .in_section:nth-child(8)>div .img_bar img{width: 50%;}
+    #big_out .in_section:nth-child(8)>div .img_bar{height: 80px;}
+    #big_out .in_section:nth-child(8)>div .img_bar:nth-child(2){margin: 20px auto 0 auto;}
+    #big_out .in_section:nth-child(8)>div:nth-child(2)>div:nth-child(2){margin-top: 20px;}
+    #big_out .in_section:nth-child(8) .ques{margin-top: 70px;}
+    #big_out .in_section:nth-child(8) .ques>h1{margin-bottom: 40px;}
+    #big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(2){margin-bottom:70px; }
+    #big_out .in_section:nth-child(8) .ques>div>div{width: 75%;}
+}
+@media only screen and (max-width: 410px){
+    .se4>div:nth-child(2){margin-left:19vw;}
+}
+@media only screen and (max-width: 375px) {
+    .sec3>.half>.color_out>div{min-height: 170px;}
+    #big_out .in_section:nth-child(3){padding-bottom:70px; }
+    .se4>div:nth-child(1){bottom:30px;left: 1.2%;}
+    .se4>div:nth-child(2){bottom:30px;right: 1.2%;}
+    .se4>div:nth-child(1)>img:nth-child(1){min-width: 110px;}
+    .se4>div:nth-child(1)>img:nth-child(2){min-width: 110px;}/*margin-left: 0;margin-top: 35px;} */
+    .se4>div:nth-child(2)>img:nth-child(1){min-width: 110px;}
+    .se4>div:nth-child(2)>img:nth-child(2){min-width: 110px;margin-top: 35px;margin-right:0; }
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{top: 210px;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{right: 15px;}
+    .in_section:nth-child(7){padding-top: 120px;}
+    #big_out .in_section:nth-child(8) .ques>div>div>span:nth-child(2){margin-top: 15px;margin-bottom: 40px;}
+}
+@media only screen and (max-width: 360px) {
+     #big_out .in_section:nth-child(4)>h1{padding-top: 40px;}
+    .se4>div:nth-child(1){position: absolute;bottom:55px;left: 1.5%;margin: 0;}
+    .se4>div:nth-child(2){position: absolute;bottom:50px;right: -0.5%;margin: 0;}
+    .se4>div:nth-child(1)>img:nth-child(1),.se4>div:nth-child(1)>img:nth-child(2){min-width: 100px;}
+    .se4>div:nth-child(2)>img:nth-child(1),.se4>div:nth-child(2)>img:nth-child(2){min-width: 100px;}    
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{bottom: 70px;}
+    #big_out .in_section:nth-child(6)>h1{margin: 0 0 0 30px;}
+}
+@media only screen and (max-width: 320px) {
+    
+    .in_section:nth-child(7){padding-top: 100px;}
+    #big_out .in_section:nth-child(3){padding-bottom:50px; }
+    .sec3{width: 95%;}
+    .sec3>.half>.color_out>div{min-height:155px; }
+    #big_out .in_section:nth-child(5)>.sec5>span.wdl{top:180px; left: 20px;}
+    #big_out .in_section:nth-child(5)>.sec5>span.wdr{bottom: 60px;right: 10px;}
+    #big_out .in_section:nth-child(6)>h1{margin: 0 0 0 30px;}
+    #big_out .in_section:nth-child(8){height: 1380px;}
+    #big_out .in_section:nth-child(8)>h1{padding-top: 180px;}
+    #big_out .in_section:nth-child(8)>div .img_bar{width: 82%;height: 55px;}
+    #big_out .in_section:nth-child(8) .ques{margin-top: 50px;}
+    .se4>div:nth-child(1){bottom:70px;left: 1.2%;}
+    .se4>div:nth-child(2){bottom:60px;right: 1.2%;}
+    .se4>div:nth-child(1)>img:nth-child(1){min-width: 95px;}
+    .se4>div:nth-child(1)>img:nth-child(2){min-width: 95px;}/*margin-left: 0;margin-top: 35px;} */
+    .se4>div:nth-child(2)>img:nth-child(1){min-width: 95px;}
+    .se4>div:nth-child(2)>img:nth-child(2){min-width: 95px;margin-top: 35px;margin-right:0; }
+}
+</style>
+<body>
+    <!-- <img class="bk" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/chang_02_car.png" alt=""> -->
+    <div id="big_out">
+        <div class="in_section">
+            <img class="mo_back" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s1_kv_m.jpg" alt="">
+            <div class="sec1">
+                <div class="bk">
+                    <img class="line_01 ab" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/line_back.png" alt="">
+                    <div class="ani_3 ab">
+                        <div class="re">                            
+                                <span class="ab it01">
+                                    <img class="round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/circle_02.png" alt="">
+                                </span>
+                                <span class="ab it02">
+                                    <img class="round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/circle_03.png" alt="">
+                                </span>
+                                <span class="ab it03">
+                                    <img class="round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/circle_01.png" alt="">
+                                </span>                                                                
+                                <img class="line_02 ab" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/line_front.png" alt="">                                
+                        </div>
+                    </div>
+                </div>
+                <div class="bk ab bottoms w100 txtcen">
+                    <span class="bk">單補蔘 不固氣又易上火</span>
+                    <span class="bk">複方相輔相成 效果更全面</span>
+                    <!-- <span class="bk mo_none">人蔘溫燥，單補蔘固氣效果不佳，可能為導致上火，複方講求君臣佐使，不是任意添加就會有效果。</span> -->
+                    <span class="bk mo_none">人蔘溫燥，單補蔘可能導致上火，且補氣不易持久、固氣效果不佳。</span>
+                    <span class="bk mo_none">白蘭氏養蔘飲採御用複方，配方間講求君臣佐使、互相搭配，可補氣、固氣又不上火。</span>
+                    <!-- <span class="mo_back s1_mowd">人蔘溫燥，單補蔘固氣效果不佳，可能為導致上火</span>
+                    <span class="mo_back s1_mowd">複方講求君臣佐使，不是任意添加就會有效果。</span> -->
+                    <span class="mo_back s1_mowd">人蔘溫燥，單補蔘可能導致上火，</span>
+                    <span class="mo_back s1_mowd">且補氣不易持久、固氣效果不佳。</span>
+                    <span class="mo_back s1_mowd">白蘭氏養蔘飲採御用複方，</span>
+                    <span class="mo_back s1_mowd">配方間講求君臣佐使、互相搭配，可補氣、固氣又不上火。</span>
+                    
+                    
+                </div>
+            </div>
+        </div><!--1-->
+        <div class="in_section">
+            <!-- <img class="mo_back" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s3_item_m.jpg" alt=""> -->
+        </div><!--2-->
+        <div class="in_section">
+            <h1 class="txtcen">
+                <span class="bk">明明都是人蔘</span>
+                <span class="bk">有什麼不同?</span>
+            </h1>            
+            <div class="sec3 m_auto">
+                <div class="half inbk">
+                    <img class="bk nimg" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_title1_pc.png" alt="">
+                    <div class="color_out">
+                                <div>
+                                    <span class="inbk mo_bk mo_txtcen"><img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_icon_1.jpg" alt=""></span>
+                                    <span class="inbk words mo_bk mo_txtcen">
+                                        <span class="bk titles">成效有限</span>
+                                        <span class="bk">人蔘單打獨鬥</span>
+                                        <span class="bk">效果有限</span>
+                                    </span>
+                                </div>
+                                <div>
+                                        <span class="inbk mo_bk mo_txtcen"><img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_icon_2.jpg" alt=""></span>
+                                        <span class="inbk words mo_bk mo_txtcen">
+                                            <span class="bk titles">大失元氣</span>
+                                            <span class="bk">沒固氣還漏氣</span>                                
+                                        </span>
+                                </div>
+                                <div>
+                                        <span class="inbk mo_bk mo_txtcen"><img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_icon_3.jpg" alt=""></span>
+                                        <span class="inbk words mo_bk mo_txtcen">
+                                            <span class="bk titles">元氣不平衡</span>
+                                            <span class="bk">火氣太旺盛</span>
+                                            <span class="bk">沒有降火氣效果</span>
+                                        </span>
+                        </div>
+                    </div>                                        
+                </div>
+                <div class="half inbk">
+                        <img class="bk nimg" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_title2_pc.jpg" alt="">    
+                        <div class="color_out">
+                            <div>
+                                        <span class="inbk mo_bk mo_txtcen"><img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_icon_4.jpg" alt=""></span>
+                                        <span class="inbk words mo_bk mo_txtcen">
+                                            <span class="bk titles">補足氣</span>
+                                            <span class="bk">人蔘+五味子</span>
+                                            <span class="bk mo_none">滋補元氣</span>
+                                            <span class="bk mo_none">維持巔峰活力</span>
+                                            <span class="mo_back">滋補元氣，維持巔峰活力</span>
+                                        </span>
+                            </div>
+                            <div>
+                                            <span class="inbk mo_bk mo_txtcen"><img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_icon_5.jpg" alt=""></span>
+                                            <span class="inbk words mo_bk mo_txtcen">
+                                                <span class="bk titles">固元氣</span>
+                                                <span class="bk">五味子鎖住元氣</span>     
+                                                <span class="bk">拼事業不漏氣</span>                           
+                                            </span>
+                            </div>
+                            <div>
+                                            <span class="inbk mo_bk mo_txtcen"><img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s4_dif_icon_6.jpg" alt=""></span>
+                                            <span class="inbk words mo_bk mo_txtcen">
+                                                <span class="bk titles">降火氣</span>
+                                                <span class="bk">麥門冬潤氣</span>                                                        
+                                                <span class="bk">調節平衡不上火</span>
+                                            </span>
+                            </div>
+                        </div>                                                    
+    
+                    </div>
+            </div>
+        </div><!--3-->
+        <div class="in_section">
+            <!-- <img class="mo_back" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_bg_m.png" alt=""> -->
+            <h1 class="txtcen">
+                <span class="bk">複方人蔘飲</span>
+                <span class="bk">最適合給誰喝呢?</span>
+            </h1>
+            <div class="se4 m_auto">                
+                <div class="inbk">
+                    <img class="bk" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_office.png" alt="">
+                    <img class="bk" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_wife.png" alt="">
+                </div>
+                <div class="inbk txtr">
+                    <img class="bk" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_body.png" alt="">
+                    <img class="txtr" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s5_buy_elder.png" alt="">
+                </div>
+            </div>
+        </div><!--4-->
+        <div class="in_section">
+            <div class="sec5 m_auto">
+                <h1 class="txtl">
+                    <span class="bk">什麼時候補充</span>
+                    <span class="bk">複方人蔘飲最好?</span>
+                    <span class="bk">結合複方三味 一年四季天天飲用也不上火</span>
+                </h1>
+                <span class="ab wdl mo_none ">早上飲用最佳!補足一日元氣</span>
+                <span class="ab wdr mo_none ">上班乏力時飲用，提振精神活力！</span>         
+                <span class="ab wdl mo_block">早上飲用最佳!<br>補足一日元氣</span>       
+                <span class="ab wdr mo_block">上班乏力時飲用，<br>提振精神活力！</span>       
+            </div>
+        </div><!--5-->
+        <div class="in_section">
+                    <h1 class="bk">
+                        <span class="bk">養蔘飲</span>
+                        <span class="bk">冰糖燉梨配方</span>
+                        <span class="bk">給忙碌、想要好氣色的你</span>
+                    </h1>                    
+        </div><!--6-->
+        <div class="in_section re">
+            <div class="titles ab"></div>
+            <div class="sec7 re">                
+                <div class="bk re">
+                    <div class="inbk  w40 re ">
+                        <a href="https://rin.tw/2016-3-18/ " target="blank">
+                            <img class="bk round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_pic_1.jpg" alt=""> 
+                        </a>
+                        <div class="dress_back ab">
+                            <span class="re bk">泡菜<br>公主</span>
+                        </div>
+                    </div>
+                    <div class="inbk  w60 words">
+                        <div class="bk">
+                            <span class="inbk fs32 fbold">生活達人</span>
+                            <span class="inbk fs24">照顧幸福一家</span>
+                        </div>
+                        <div class="bk">
+                                白蘭氏養蔘飲傳承300年的御用複方概念，這個養生方子不僅有人蔘外，還有五味子來固氣、麥門冬退火，
+                                據說乾隆以前也用這三味複方子來養生，到晚年時期御醫更是規定每天要喝一杯，果然是皇帝級的御用養生複方呢！
+                        </div>
+                    </div>
+                </div>
+                <div class="bk">    
+                        <div class="inbk  w40 re mo_block">
+                            <a href="https://drugs.pixnet.net/blog" target="blank">
+                                <img class="bk round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_pic_2.jpg" alt="">
+                            </a> 
+                                <div class="dress_back ab">
+                                        <span class="re bk">藥師<br>吉米</span>
+                                </div>
+                        </div>                    
+                        <div class="inbk  w60 words">
+                            <div class="bk">
+                                <span class="inbk fs32 fbold">超級藥師</span>
+                                <span class="inbk fs24">挑戰生活無限可能</span>
+                            </div>
+                            <div class="bk">
+                        這段期間的飲用讓吉米感受到精神狀況都不錯，到處旅行拍照的時候也覺得更有活力更帶勁，
+                        裡面就有人蔘、麥門冬、五味子，不用燉煮不費事，而且冰冰涼涼得更好喝，真的是適合現代人的生活習慣啊！
+                            </div>
+                        </div>
+                        <div class="inbk  w40 re mo_none">
+                            <a href="https://drugs.pixnet.net/blog" target="blank">
+                                <img class="bk round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_pic_2.jpg" alt=""> 
+                            </a>
+                            <div class="dress_back ab">
+                                    <span class="re bk">藥師<br>吉米</span>
+                            </div>
+                        </div>
+                </div>  
+                <div class="bk">
+                        <div class="inbk  w40 re">
+                            <a href="https://boo2k.com/" target="blank">
+                                <img class="bk round" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_pic_3.jpg" alt=""> 
+                            </a>
+                            <div class="dress_back ab">
+                                    <span class="re bk">小布</span>
+                            </div>
+                        </div>
+                        <div class="inbk  w60 words">
+                            <div class="bk">
+                                <span class="inbk fs32 fbold">無敵媽媽</span>
+                                <span class="inbk fs24">育兒、旅行 也操不倒</span>
+                            </div>
+                            <div class="bk">
+                    澳洲的時候我也有帶幾瓶養蔘飲在行李箱裡面，持續喝養蔘飲後即便晚睡早起，
+                    氣色還是維持的很好，因為當身體狀況好了，自然由內而外散發出來的氣色就跟著變好。整趟下來拍照時也不怕面色不佳，玩得很盡興。
+                            </div>
+                        </div>
+                </div>
+                <div class="bottoms bk">
+                    <div class="inbk">
+                        <div class="bk txtcen">
+                            <span>挑戰時間+工作壓力的生存賽</span>
+                        </div>
+                        <div class="bk txtcen">
+                            <div class="inbk w31 re">
+                                <a href="https://gary6711.pixnet.net/blog/post/33456685" target="blank">
+                                    <img class="bk round w90" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_blogger_1.png" alt="">                                 
+                                </a>
+                                <span class="bk">蔡朝</span>
+                            </div>
+                            <div class="inbk w31 re">
+                                <a href="http://people2planet.blogspot.com/2016/04/blog-post_12.html" target="blank">
+                                    <img class="bk round w90" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_blogger_2.png" alt=""> 
+                                </a>
+                                <span class="bk">人2</span>
+                            </div>
+                            <div class="inbk w31 re">
+                                <a href="https://rmfoodie.com/p/954" target="blank">
+                                    <img class="bk round w90" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_blogger_3.png" alt=""> 
+                                </a>
+                                <span class="bk">熊喵</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inbk">
+                            <div class="bk txtcen">
+                                <span>照顧家裡兩寶 老公和孩子的媽</span>
+                            </div>
+                            <div class="bk txtcen">
+                                <div class="inbk w31 re">
+                                    <a href="https://yukiblog.tw/read-2819.html" target="blank">
+                                        <img class="bk round w90" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s8_kol_blogger_4.png" alt=""> 
+                                    </a>
+                                    <span class="bk f_nowrap">Yuki’s Life</span>
+                                </div>                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--7-->
+        <div class="in_section">
+            <h1 class="txtcen">
+                <span class="bk">送禮好選擇</span>
+                <span class="bk">完整複方，養護元氣</span>
+            </h1>
+            <div class="bk m_auto">
+                <div class="bk">
+                    <div class="inbk img_bar txtcen re btns">
+                        <a href="https://mall.brands.com.tw/p/000000000014003997?_ga=2.59939428.839565867.1563333178-1465244286.1562848226" target="blank">
+                            <img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_logo_1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="inbk img_bar txtcen re btns">                        
+                        <a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2103200071" target="blank">
+                            <img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_logo_4.png" alt="">
+                        </a>
+                    </div>                                        
+                </div>
+                <div class="bk">
+                    <div class="inbk img_bar txtcen re btns">
+                        <a href="https://tw.buy.yahoo.com/?catitemid=94530&hpp=sub660catid11658catitem94530" target="blank">
+                            <img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_logo_2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="inbk img_bar txtcen re btns">
+                        <a href="https://24h.pchome.com.tw/store/DBCL08 " target="blank">
+                            <img src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s9_ec_logo_3.png" alt="">
+                        </a>
+                    </div>
+                </div>                
+            </div>
+            <div class="ques bk w80 m_auto">
+                <h1 class="bk txtcen">問與答</h1>
+                <div class="bk w100 re">
+                    <img class="ab" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s10_qa_icon1.png" alt="">
+                    <div class="inbk w70">
+                            <span class="bk fs24">什麼樣的人需要喝白蘭氏養蔘飲？</span>
+                            <span class="bk fs18">
+                                    如果你每天工作繁忙、壓力大、總覺得時間不夠用，
+                                    那一定要試試白蘭氏養蔘飲。白蘭氏養蔘飲可以幫助精神旺盛，
+                                    並且使你每天充滿元氣。適合每一位希望在工作與個人生活上都能保持最佳狀態的你。
+                            </span>
+                    </div>
+                </div>
+                <div class="bk w100 re">
+                        <img class="ab" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s10_qa_icon2.png" alt="">
+                        <div class="inbk w70">
+                                <span class="bk fs24">白蘭氏養蔘飲和其他蔘類飲品最大的不同在哪？</span>
+                                <span class="bk fs18">
+                                        白蘭氏養蔘飲，遵循中國傳統名帖，結合現代科學技術研發而成，
+                                        人蔘補氣，五味子固元氣，麥門冬退火，不僅能延長人蔘補氣的效果，
+                                        還能平衡人蔘的燥熱。複方相輔相成，效果更全面。
+                                </span>
+                        </div>
+                </div>
+                <div class="bk w100 re">
+                        <img class="ab" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s10_qa_icon1.png" alt="">
+                        <div class="inbk w70">
+                                <span class="bk fs24">聽說人蔘喝多容易燥熱，白蘭氏養蔘飲也會有這樣的問題嗎？</span>
+                                <span class="bk fs18">
+                                        白蘭氏養蔘飲除了選用珍貴的人蔘之外，更加入麥門冬來制約人蔘的火氣，
+                                        補氣同時也能退火、降火氣。因此不用擔心會有燥熱問題。
+                                </span>
+                        </div>
+                </div>
+                <div class="bk w100 re">
+                        <img class="ab" src="https://www.brands.com.tw/content/dam/brands/taiwan/whats-new/EOG/2019EOG/s10_qa_icon2.png" alt="">
+                        <div class="inbk w70">
+                                <span class="bk fs24">每天建議飲用量是多少？</span>
+                                <span class="bk fs18">每天一瓶。根據個人喜好，可選擇在餐前或餐後飲用。</span>
+                        </div>
+                </div>
+
+
+            </div>
+        </div><!--8-->
+       
+
+    </div>
+</body>
+</html>
